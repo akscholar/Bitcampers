@@ -1,0 +1,8 @@
+import plotly.graph_objects as go
+
+names = ['Helena Holý', 'Richard Cunningham', 'Luis Rojas', 'Ladislav Kovács', 'Hugh O\'Reilly', 'Julia Barnett', 'Frank Ralston', 'Fynn Zimmermann', 'Astrid Gruber', 'Victor Stevens']
+scores = [49.62, 47.62, 46.62, 45.62, 45.62, 43.62, 43.62, 43.62, 42.62, 42.62]
+
+fig = go.Figure(data=[go.Bar(x=names, y=scores)])
+fig.update_layout(title_text='Scores by Name', xaxis_title='Name', yaxis_title='Score')
+fig.show()
