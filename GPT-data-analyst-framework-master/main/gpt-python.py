@@ -61,7 +61,8 @@ chat_completion = openai.ChatCompletion.create(
             -----
 
             Visualise this data using plotly as a most appropriate visualization: {data_string}
-
+            -----
+            BE SURE NOT TO OUTPUT ANY FORMATTING OR MARKDOWN FORMATTING (like backticks). I want JUST the SQL CODE:
 '''}
         ]
     )
@@ -71,4 +72,4 @@ execute = chat_completion['choices'][0]['message']['content']
 with open('python-execute.txt', 'w') as f:
     f.write(execute)
 
-subprocess.run(["python", 'python-execute.txt'])
+subprocess.run(["python3", 'python-execute.txt'])
