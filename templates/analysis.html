@@ -5,23 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <style>
+      .highlight-box {
+          background-color: #cce5ff; 
+          border: 2px solid #007bff; 
+          border-radius: 10px;
+          padding: 10px;
+      }
+  </style>
     <title>Generic Name</title>
   </head>
   <body>
-    <h1>Analysis</h1>
     <div class="container">
-      <div class="row justify-content-center">
-          <div class="col-lg-20">
-            <form action = "/process_query" method="post">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" name="query" placeholder="Enter your query" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-success" type="submit" id="button-addon2">Submit</button>
-              </div>
-            </form>
-          </div>
-      </div>
-  </div>
+      <h1>Analysis</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-20">
+                <form action="/process_query" method="post">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="query" placeholder="Enter your query" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-success" type="submit" id="button-addon2">Submit</button>
+                    </div>
+                </form>
+                <!-- Display box for answer -->
+                <h2>Answer:</h2>
+                <div class="highlight-box">
+                  <p>{{ answer }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div><p></p></div>
+    <table>
+    <tr>
+      <td>
+        <table class="table table-bordered" style="position: absolute; left: 6%; width: 40%; align-items: left;" id="table">
+          <tr>
+              <td>
+                <h3>Top 3 Factors that contribute to dropout:</h3>
+              </td>
+          </tr>
+          <tr>
+              <td>Tuition Fees</td>
+          </tr>
+          <tr>
+              <td>Age</td>
+          </tr>
+          <tr>
+              <td>Admission grade</td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <class style="position: absolute; left: 60%; width: 40%; align-items: left;"style="position: absolute; left: 0%; width: 40%; align-items: left;">
+          <img class='logo' src="static/barchart.png" style="max-height: 250px; align-items: left; position: fixed; right: 130px;" >
+        </class>
+      </td>
+    </tr>
+    </table>
+    <button class="btn btn-success" style="position: fixed; bottom: 20px; left: 70%; width: 20%;" type="button" onclick="window.location.href='/info'">More information</button>
+    
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
 

@@ -30,10 +30,13 @@ def process_query():
         ra = gpt.do(query)
         print(ra)
         if query:
-            return render_template('analysis.html', query=query)
+            return render_template('analysis.html', query=query, answer=ra)
     return("Error: Missing query")
 
+@app.route("/info")
+def info():
+    return render_template("info.html")
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8002)
+    app.run(debug=True, port=5000)
