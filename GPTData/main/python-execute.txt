@@ -1,0 +1,8 @@
+```python
+import plotly.express as px
+
+# Assuming df is the DataFrame with the data
+fig = px.scatter(df, x='X_column_name', y='Y_column_name',
+                 title='Scatter Plot', labels={'X_column_name': 'X Values', 'Y_column_name': 'Y Values'})
+fig.show()
+```

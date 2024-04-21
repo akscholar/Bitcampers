@@ -1,0 +1,17 @@
+education_stats:
+- Maritalstatus
+- Course
+- Daytime/eveningattendance
+- Previousqualification
+- Previousqualification(grade)
+- Nacionality
+- Admissiongrade
+- Displaced
+- Educationspecialneeds
+- Debtor
+- Tuitionfeesuptodate
+- Gender
+- Scholarshipholder
+- Ageatenrollment
+- International
+- Result
