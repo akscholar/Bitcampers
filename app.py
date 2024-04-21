@@ -27,7 +27,7 @@ def process_query():
         print(query)
         if query:
             return render_template('analysis.html', query=query)
-    return("Error: Missing query or failed analysis")
+    return("Error: Missing query")
 
 
 if __name__ == '__main__':

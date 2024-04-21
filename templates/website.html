@@ -15,11 +15,26 @@
             justify-content: center;
             align-items: center;
             height: 100%;
-            color:aqua;
+            color:white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+        .banner{
+            background-image: linear-gradient(to right, #64b3f4, #c2e59c);
+            height: 137px;
+            display: flex;
         }
     </style>
 </head>
 <body>
+    <!--BANNER TOP-->
+    <div class="banner">
+        <img class='logo' src="static/notebook.png" style="max-height: 137px; align-items: left;" >
+        <div class="container">
+            <h1>Welcome to Dropout Calculator!</h1>
+        </div>
+        <!--img class='logo' src="/files/images/map only.png" style="max-height: 137px; align-items: right;"></img> -->
+    </div>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-20">
@@ -32,16 +47,5 @@
             </div>
         </div>
     </div>
-
-    <!-- <script>
-        document.getElementById('button-addon2').addEventListener('click', function() {
-            var filename = document.getElementById('filenameInput').value;
-            console.log(filename);
-            localStorage.setItem('filename', filename);
-
-            // Redirect to the new page called 'analysis.html'
-            window.location.href = 'analysis.html';
-        });
-    </script> -->
 </body>
 </html>
