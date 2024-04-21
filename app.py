@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request
+from GPTData.main.gptsql import gpts
 
 app = Flask(__name__)
 
@@ -24,11 +25,14 @@ def analysis():
 def process_query():
     if request.method == "POST":
         query = request.form.get('query')
-        print(query)
+        print("ba")
+        gpt = gpts()
+        ra = gpt.do(query)
+        print(ra)
         if query:
             return render_template('analysis.html', query=query)
-    return("Error: Missing query or failed analysis")
+    return query
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True, port=8002)
