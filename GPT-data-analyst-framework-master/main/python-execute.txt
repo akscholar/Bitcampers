@@ -1,8 +1,8 @@
-import plotly.graph_objects as go
+```python
+import plotly.express as px
 
-names = ['Helena Holý', "Hugh O'Reilly", 'Ladislav Kovács', 'Luis Rojas', 'Richard Cunningham']
-scores = [49.62, 45.62, 45.62, 46.62, 47.62]
-
-fig = go.Figure(data=[go.Bar(x=names, y=scores)])
-fig.update_layout(title='Scores of Individuals', xaxis_title='Names', yaxis_title='Scores')
+# Assuming df is the DataFrame with the data
+fig = px.scatter(df, x='X_column_name', y='Y_column_name',
+                 title='Scatter Plot', labels={'X_column_name': 'X Values', 'Y_column_name': 'Y Values'})
 fig.show()
+```
